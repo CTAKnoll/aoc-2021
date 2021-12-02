@@ -12,7 +12,6 @@ def parse(str):
 with open('input.txt') as f:
     content = f.read()
     for str in content.split("\n"):
-        print(str)
         parse(str)
 print(coord[0] * coord[1])
 
