@@ -6,11 +6,9 @@ numbers = list(map(int, array))
 larger = 0
 previous = 0
 
-# This returns the "correct" answer, but clearly counts the first 3-window, so I'm not
-# sure what's going on with either me or AOC. Blame the weed.
-for i in range(2, len(numbers)-1):
+for i in range(2, len(numbers)):
     val = numbers[i] + numbers[i-1] + numbers[i-2]
-    if val > previous:
+    if val > previous and i != 2:
         larger = larger + 1
     previous = val
 print(larger)
